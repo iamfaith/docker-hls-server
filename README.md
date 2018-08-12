@@ -33,3 +33,7 @@ export STREAM_KEY=<your key>
 ![3](./img/3.png)
 
 - enjoy your live cast!
+
+## attendee
+
+open browser with `STREAM_SERVER` address
