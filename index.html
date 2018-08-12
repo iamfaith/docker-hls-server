@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja" class="">
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+        <style>
+         #video{
+             width:100%;
+             }
+        </style>
+    </head>
+    <body>
+        <video id="video" controls muted autoplay></video>
+        
+        <script>
+         var video = document.getElementById('video');
+         if(Hls.isSupported()) {
+             var hls = new Hls();
+             hls.loadSource('http://{STREAM_SERVER}/hls/{STREAM_KEY}.m3u8');
+             hls.attachMedia(video);
+             hls.on(Hls.Events.MANIFEST_PARSED,function() {
+                 video.play();
+             });
+         } else{
+             alert("HLSがサポートされているデバイスではありません");
+         }
+        </script>
+    </body>
+</html>
