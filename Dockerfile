@@ -1,6 +1,6 @@
-FROM ubuntu:latest
 
-MAINTAINER garicchi
+FROM xianzixiang/xenial
+MAINTAINER faith
 
 RUN apt update
 RUN apt upgrade
