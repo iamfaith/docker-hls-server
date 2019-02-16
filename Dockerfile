@@ -3,7 +3,7 @@ FROM xianzixiang/xenial
 MAINTAINER faith
 
 RUN apt update
-RUN apt upgrade
+
 RUN apt-get install -y build-essential git curl zip libpcre3 libpcre3-dev libssl-dev zlib1g-dev
 
 RUN curl http://nginx.org/download/nginx-1.15.2.tar.gz -o nginx.tar.gz
